@@ -1,0 +1,3 @@
+# custom requirements
+httpx
+pandas
