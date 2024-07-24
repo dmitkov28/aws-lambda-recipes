@@ -19,7 +19,7 @@ terraform apply
 
 Override the default variable values with
 ```
-terraform apply -var="function_name=my_custom_function" -var="ecr_repo_name=my_custom_repo"
+terraform apply -var="function_name=my_custom_function" -var="ecr_repo_name=my_custom_repo" -var="api_gateway_name=my_custom_api_gateway"
 ```
 
 Alternatively, use a `.tfvars` file:
@@ -28,6 +28,7 @@ Alternatively, use a `.tfvars` file:
 ```
 function_name = "my_custom_function"
 ecr_repo_name = "my_custom_repo"
+api_gateway_name = "my_custom_api_gateway"
 ```
 
 Spin up with:
