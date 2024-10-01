@@ -23,7 +23,7 @@ resource "aws_lambda_function_url" "lambda_function_url" {
 }
 
 resource "aws_iam_role" "lambda_role" {
-  name = "lambda_role"
+  name = var.function_role
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"

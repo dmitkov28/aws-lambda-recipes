@@ -4,6 +4,12 @@ variable "function_name" {
   default     = "serverless_fastapi"
 }
 
+variable "function_role" {
+  description = "Name of the Lambda function role"
+  type        = string
+  default     = "serverless_fastapi"
+}
+
 variable "ecr_repo_name" {
   description = "Name of the ECR repository"
   type        = string
