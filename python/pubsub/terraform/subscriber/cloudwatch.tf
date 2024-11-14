@@ -1,4 +1,4 @@
-resource "aws_cloudwatch_log_group" "publisher_cloudwatch" {
+resource "aws_cloudwatch_log_group" "subscriber_cloudwatch" {
   name              = "/aws/lambda/${var.subscriber_function_name}_logs"
   retention_in_days = 1
 }
