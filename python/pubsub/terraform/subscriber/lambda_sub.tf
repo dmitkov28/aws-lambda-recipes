@@ -7,9 +7,14 @@ resource "aws_lambda_function" "subscriber_function" {
   handler       = "main.lambda_handler"
   timeout       = 60
   memory_size   = 512
-
-
 }
+
+resource "aws_lambda_event_source_mapping" "sqs_trigger" {
+  event_source_arn = var.queue_arn
+  function_name    = aws_lambda_function.subscriber_function.function_name
+  batch_size       = 1
+}
+
 
 resource "aws_iam_role" "subscriber_function_role" {
   name = var.subscriber_function_role
