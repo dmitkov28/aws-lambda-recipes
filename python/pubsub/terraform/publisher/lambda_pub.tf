@@ -2,7 +2,7 @@ resource "aws_lambda_function" "publisher_function" {
   function_name = var.publisher_function_name
   architectures = [var.publisher_function_arch]
   role          = aws_iam_role.publisher_function_role.arn
-  filename      = "../lambda_subscriber/func.zip"
+  filename      = "../lambda_publisher/func.zip"
   runtime       = "python3.12"
   handler       = "main.lambda_handler"
   timeout       = 60

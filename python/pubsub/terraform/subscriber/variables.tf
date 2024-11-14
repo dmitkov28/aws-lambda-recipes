@@ -1,7 +1,7 @@
 variable "subscriber_function_name" {
   description = "Name of Subscriber Lambda"
   type        = string
-  default     = "subscribe"
+  default     = "subscriber"
 }
 
 variable "subscriber_function_role" {
