@@ -5,8 +5,8 @@ resource "aws_lambda_function" "subscriber_function" {
   filename      = "../lambda_subscriber/func.zip"
   runtime       = "python3.12"
   handler       = "main.lambda_handler"
-  timeout     = 60
-  memory_size = 512
+  timeout       = 60
+  memory_size   = 512
 
 
 }
@@ -38,8 +38,9 @@ resource "aws_iam_role_policy" "subscriber_function_sqs_policy" {
       {
         Effect = "Allow"
         Action = [
-          "sqs:SendMessage",
-          "sqs:SendMessageBatch"
+          "sqs:ReceiveMessage",
+          "sqs:DeleteMessage",
+          "sqs:GetQueueAttributes"
         ]
         Resource = var.queue_arn
       }

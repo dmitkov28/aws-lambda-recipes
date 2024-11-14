@@ -43,9 +43,8 @@ resource "aws_iam_role_policy" "publisher_function_sqs_policy" {
       {
         Effect = "Allow"
         Action = [
-          "sqs:ReceiveMessage",
-          "sqs:DeleteMessage",
-          "sqs:GetQueueAttributes"
+          "sqs:SendMessage",
+          "sqs:SendMessageBatch",
         ]
         Resource = var.queue_arn
       }
