@@ -1,8 +1,11 @@
 ## Overview
+
 A simple Pub-Sub setup 
 Includes:
 - AWS Lambda x2
 - SQS
+
+![diagram](%253.svg)
 
 ## Code
 Write your publisher code in  [lambda_publisher](lambda_publisher/main.py)
