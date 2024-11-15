@@ -5,7 +5,7 @@ Includes:
 - AWS Lambda x2
 - SQS
 
-![diagram](%253.svg)
+![diagram](diagram.svg)
 
 ## Code
 Write your publisher code in  [lambda_publisher](lambda_publisher/main.py)
