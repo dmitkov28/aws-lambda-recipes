@@ -4,3 +4,5 @@
 - [Serverless FastAPI](python/serverless-fastapi/README.md)
 
 - [Pub-Sub with AWS Lambda & SQS](python/pubsub/)
+
+- [Simple AWS Lambda in Go](go/)
