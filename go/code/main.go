@@ -6,10 +6,14 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func HandleRequest(ctx context.Context, event interface{}) (string, error) {
+type Response struct {
+	Message string `json:"message"`
+}
+
+func HandleRequest(ctx context.Context, event interface{}) (Response, error) {
 	fmt.Println("event", event)
-	
-	return "Hello world", nil
+
+	return Response{Message: "Hello world!"}, nil
 }
 
 func main() {
